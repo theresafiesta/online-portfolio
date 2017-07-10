@@ -1,0 +1,130 @@
+:root 
+{
+	/* fonts styles */
+	--font-common: 'Bubbler One';
+	--font-accent: 'Bungee Hairline';
+
+	/* font sizes*/
+	--font-size-title: 28px;
+	--font-size-subtitle: 26px;
+	--font-size-common: 22px;
+	--font-size-hint: 16px;
+	--font-size-small: 14px;
+	--font-size-tiny: 12px;
+
+	/* colors */
+	--color-bg-common: #333333;
+	--color-text-common: azure;
+	--color-bg-button: #cccccc;
+	--color-text-button: #333333;
+	--color-text-nav: azure;
+	--color-text-nav-highlight: thistle;
+}
+
+*
+{
+	color: azure;
+	background-color: var(--color-bg-common);
+	font-family: var(--font-common);
+	font-size: var(--font-size-common);
+}
+body
+{
+	padding-top: 0.5%;
+	margin-top: 0.5%;
+}
+h1
+{
+	font-size: var(--font-size-title);
+}
+h2
+{
+	font-size: var(--font-size-subtitle);
+}
+h3
+{
+	font-size: var(--font-size-common);
+}
+h4
+{
+	font-size: var(--font-size-hint);
+}
+h5
+{
+	font-size: var(--font-size-small);
+}
+h6
+{
+	font-size: var(--font-size-tiny);
+}
+section
+{
+	padding-left: 3%;
+	padding-right: 3%;
+}
+button
+{
+	background-color: var(--color-bg-button);
+	color: var(--color-text-button);
+}
+footer
+{
+	position: fixed;
+	height: 50px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	margin-bottom: 0px;
+}
+#copyright
+{
+	text-align: center;
+	font-size: var(--font-size-small);
+	font-family: var(--font-accent);
+}
+#section_top, #section_middle, #section_bottom
+{
+	
+}
+#header_container
+{
+
+}
+#header_left
+{
+	text-align: left;
+	float: left;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+#logo
+{
+	/*width: 5%;
+	height: 5%;*/
+	padding-top: 0%;
+	margin-top: 0;
+	margin-left: 0;
+}
+#header_right
+{
+	text-align: right;
+	float: right;
+	overflow: visible;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+#link_home, #link_about, #link_resume, #link_projects, #link_contact
+{
+	text-decoration: none;
+	font-weight: bolder;
+	color: var(--color-text-nav);
+	padding-right: 0.5%;
+	border: none;
+	background: none;
+}
+#breakSpace
+{
+	padding-top: 6%;
+	padding-bottom: 6%;
+}
