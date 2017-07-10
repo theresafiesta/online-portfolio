@@ -18,7 +18,7 @@
 	--color-bg-button: #cccccc;
 	--color-text-button: #333333;
 	--color-text-nav: azure;
-	--color-text-nav-highlight: thistle;
+	--color-text-nav-highlight: #FFFF00;
 }
 
 *
@@ -125,6 +125,6 @@ footer
 }
 #breakSpace
 {
-	padding-top: 6%;
-	padding-bottom: 6%;
+	padding-top: 3%;
+	padding-bottom: 3%;
 }
