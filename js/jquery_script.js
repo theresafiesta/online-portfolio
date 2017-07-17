@@ -106,14 +106,56 @@ var main = function()
 	function setAboutPageContent()
 	{
 		// content variables
-		
+		var title = "Theresa the Programmer: In a Nutshell<br/>";
+		var subtitle_edu = "<i>Educational Background</i><br/>";
+		var education = "My first steps toward a career in software development began when I enrolled in a B.S. in Computer Science degree program at ECPI University. " +
+		"While attending the university, I participated in many opportunities to gain hands on experience developing programs, working on teams, and managing projects.  " +
+		"Since I am an inquisitive learner and I enjoy solving problems, programming was immediately a natural fit and led me to excel academically.  ";
+		var subtitle_dev = "<i>Professional Development Experiences</i>";
+		var development = "During the time I spent fulfilling my educational pursuits, I learned how to develop websites, configure web servers such as Apache and XAMPP, manage Oracle databases and write queries, " +
+		"create Android mobile applications, and exercise core programming concepts in several  languages.  " + 
+		"As a result of my studies at the university I have found that I prefer languages such as Python, Java and C#. " +
+		"However, I have additionally studied several other languages including C, C++, HTML, CSS, and Javascript.  " +
+		"I have also had experience utilizing popular frameworks such as Node.Js, Jquery, Slick2D, and Pygame.  " +
+		"As a programmer, I philosophically commit myself to providing proper program documentation in both team projects and " +
+		"my own personal work (i.e., commenting, flowcharting, pseudocode, and Data-flow diagramming).  " +
+		"I also enjoy implementing version control with git and developing in Linux environments.";
+		var subtitle_extra = "<i>Extra Curricular Research</i><br/>";
+		var extracurricular = "Some additional topics that caught my interest while in school also became a regular part of my studies as extracurricular research.  " +
+		"In particular,  elective courses I took in UNIX Administration as well as RedHat Fedora Administration introduced me to Linux and open-source software.  " +
+		"Today I use Linux as my main development platform and it has become my favored environment for personal use as well.  " +
+		"I enjoy sampling different distributions for fun, such as Linux Mint, Ubuntu, Fedora, OpenSUSE, and ParrotOS.  " +
+		"<br/>" +
+		"The lattermost distribution, ParrotOS, is by far my favorite Linux flavor and is representative of my interests in topics pertaining to networking and cyber security.  " +
+		"I have spent a lot of time reading articles and watching seminars by the SANS Institute, and also read books on topics including ethical hacking and security+ certification.  " +
+		"Naturally, some of the advanced concepts I encountered throughout research into many of these topics also inspired me to study some fundamentals behind digital systems.  " +
+		"These areas include programmable logic devices, logic gates, Karnaugh maps, and combinatorial logic circuits.  " +
+		"Some additional topics I continue to research in my personal time include hardware configuration, protocols, and system resources.  <br/>";		
 		
 		// clean up the page elements
 		$(section_top).empty();
 		$(section_middle).empty();
 		$(section_bottom).empty();
 		
-		$(section_top).append("testing the about page!");
+		// append the page
+		$(section_top).append(title);
+		$(section_top).append(subtitle_edu);
+		$(section_top).append(education);
+		$(section_middle).css('text-align','left');
+		$(section_middle).css('padding-left','10%');
+		$(section_middle).css('padding-right','10%');	
+		
+		$(section_middle).append(subtitle_dev);
+		$(section_middle).append(development);
+		$(section_middle).css('text-align','left');
+		$(section_middle).css('padding-left','10%');
+		$(section_middle).css('padding-right','10%');	
+		
+		$(section_bottom).append(subtitle_extra);
+		$(section_bottom).append(extracurricular);
+		$(section_bottom).css('text-align','left');
+		$(section_bottom).css('padding-left','10%');
+		$(section_bottom).css('padding-right','10%');	
 		
 		// set the last visited page
 		lastPage = link_about;
