@@ -5,12 +5,20 @@
 	--font-accent: 'Bungee Hairline';
 
 	/* font sizes*/
-	--font-size-title: 28px;
+	--font-size-title: 26px;
+	--font-size-subtitle: 22px;
+	--font-size-common: 16px;
+	--font-size-hint: 14px;
+	--font-size-small: 12px;
+	--font-size-tiny: 10px;
+
+	/* OLD font sizes*/
+	/*--font-size-title: 28px;
 	--font-size-subtitle: 26px;
 	--font-size-common: 22px;
 	--font-size-hint: 16px;
 	--font-size-small: 14px;
-	--font-size-tiny: 12px;
+	--font-size-tiny: 12px;*/
 
 	/* colors */
 	--color-bg-common: #333333;
@@ -39,7 +47,9 @@ h1
 }
 h2
 {
-	font-size: var(--font-size-subtitle);
+	font-size: var(--font-size-common);
+	font-family: var(--font-accent);
+	font-weight: normal;
 }
 h3
 {
@@ -82,9 +92,20 @@ footer
 	font-size: var(--font-size-small);
 	font-family: var(--font-accent);
 }
+#pageTitle
+{
+	text-align: center;
+	var(--font-size-title);
+}
 #section_top, #section_middle, #section_bottom
 {
 	
+}
+#sectionText /*maybe wont need*/
+{
+	text-align: left;
+	padding-left: 3%;
+	padding-right: 3%;
 }
 #header_container
 {
@@ -98,6 +119,12 @@ footer
 	white-space: nowrap;
 	text-overflow: ellipsis;
 }
+#myName, #mytitle
+{
+	font-size: var(--font-size-hint);
+	font-family: var(--font-accent);
+	font-weight: bold;
+}
 #logo
 {
 	/*width: 5%;
@@ -105,6 +132,11 @@ footer
 	padding-top: 0%;
 	margin-top: 0;
 	margin-left: 0;
+}
+#tagline
+{
+	font-size: var(--font-size-common);
+	font-family: var(--font-accent);
 }
 #header_right
 {
@@ -125,6 +157,11 @@ footer
 }
 #breakSpace
 {
-	padding-top: 3%;
-	padding-bottom: 3%;
+	padding-top: 1%;
+	padding-bottom: 1%;
+}
+#navDivider
+{
+	padding-top: 4%;
+	padding-bottom: 4%;
 }
