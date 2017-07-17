@@ -23,7 +23,7 @@
 
 *
 {
-	color: azure;
+	color: var(--color-text-common);
 	background-color: var(--color-bg-common);
 	font-family: var(--font-common);
 	font-size: var(--font-size-common);

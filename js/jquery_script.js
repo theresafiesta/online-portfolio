@@ -59,21 +59,22 @@ var main = function()
 	//##		Home Page Content
 	//##################################################//
 	
-	// content variables
-	var tagline = "<p>\"A <i>compilation</i> of artistic talent and innovative circumstance.\"</p>";
-	var elevatorPitch = 
-	"<p>I am a software developer and recent graduate of ECPI University with a B.S. in Computer Science .  " +
-	"I have two and a half years of hands-on experience  programming in languages such as Java, Python, JavaScript, HTML, C#, C++, and C.  " +
-	"My interests in open source software and cybersecurity have shaped me into an adamant Linux user and enthusiast.  " +
-	"I also have lots of creativity and professional artistic experience including digital imaging, video editing, storyingboarding, animation, and classical music composition.  "+
-	"<br/><br/>"+
-	"I am currently looking to find a Python or Java development position in a Linux environment that will leverage my skills, creativity and interests.  "
-	"My goal as a prospective employee is to seek a career that enriches the lives of other people and inspires others to live happier and healthier through technology and innovative ideas.  " +
-	"</p>";
-	
 	// function displays the page contents
 	function setHomePageContent()
 	{
+		// content variables
+		var tagline = "<p>\"A <i>compilation</i> of artistic talent and innovative circumstance.\"</p>";
+		var elevatorPitch = 
+		"<p>I am a software developer and recent graduate of ECPI University with a B.S. in Computer Science .  " +
+		"I have two and a half years of hands-on experience  programming in languages such as Java, Python, JavaScript, HTML, C#, C++, and C.  " +
+		"My interests in open source software and cybersecurity have shaped me into an adamant Linux user and enthusiast.  " +
+		"I also have lots of creativity and professional artistic experience including digital imaging, video editing, storyingboarding, animation, and classical music composition.  "+
+		"<br/><br/>"+
+		"I am currently looking to find a Python or Java development position in a Linux environment that will leverage my skills, creativity and interests.  " +
+		//"My goal as a prospective employee is to seek a career that enriches the lives of other people and inspires others to live happier and healthier through technology and innovative ideas.  " +
+		"My goal as a prospective employee is to seek a career that ..........." +
+		"</p>";
+		
 		// clean up the page elements
 		$(section_top).empty();
 		$(section_middle).empty();
@@ -100,13 +101,13 @@ var main = function()
 	//##################################################//
 	//##		About Page Content
 	//##################################################//
-	
-	// content variables
-	
-	
+		
 	// function displays the page contents
 	function setAboutPageContent()
 	{
+		// content variables
+		
+		
 		// clean up the page elements
 		$(section_top).empty();
 		$(section_middle).empty();
@@ -123,12 +124,13 @@ var main = function()
 	//##		Resume Page Content
 	//##################################################//
 	
-	// content variables
-	
-	
+
 	// function displays the page contents
 	function setResumePageContent()
 	{
+		// content variables
+
+		
 		// clean up the page elements
 		$(section_top).empty();
 		$(section_middle).empty();
@@ -145,12 +147,13 @@ var main = function()
 	//##		Projects Page Content
 	//##################################################//
 	
-	// content variables
-	
 	
 	// function displays the page contents
 	function setProjectsPageContent()
 	{
+		// content variables
+		
+		
 		// clean up the page elements
 		$(section_top).empty();
 		$(section_middle).empty();
@@ -167,14 +170,16 @@ var main = function()
 	//##		Contact Page Content
 	//##################################################//
 	
-	// content variables
-	var linkedin = ""
-	var gitHub = ""
-	var email = "thenem0301@students.ecpi.edu"
-	
+
 	// function displays the page contents
-	function setContactsPageContent()
+	function setContactPageContent()
 	{
+		// content variables
+		var linkedin = ""
+		var gitHub = ""
+		var email = "thenem0301@students.ecpi.edu"
+	
+	
 		// clean up the page elements
 		$(section_top).empty();
 		$(section_middle).empty();
@@ -191,13 +196,48 @@ var main = function()
 	//##		Display the Page
 	//##################################################//
 	
+	// initialize the home page
+	currentPage == link_home; 
+	setNavColors(); 
+	setHomePageContent();
+	console.log("[*_*] home page initialized.");	
+	
 	// when user clicks a nav link, update the currentPage and nav element color
-	if($(link_home).click()){currentPage == link_home; setNavColors(); setHomePageContent();}
-	else if($(link_about).click()){currentPage == link_about;setNavColors(); setAboutPageContent();}
-	else if($(link_resume).click()){currentPage == link_resume; setNavColors(); setResumePageContent();}
-	else if($(link_projects).click()){currentPage == link_projects; setNavColors(); setProjectsPageContent();}
-	else if($(link_contact).click()){currentPage == link_contact; setNavColors(); setContantPageContent();}
-	else {console.log("[X_X] nav link fatal error!");}
+	$(link_home).bind("click", function(){
+			currentPage == link_home; 
+			setNavColors(); 
+			setHomePageContent();
+			console.log("[*_*] home link clicked.");
+		});
+		
+		$(link_about).bind("click", function(){
+			currentPage == link_about;
+			setNavColors(); 
+			setAboutPageContent();
+			console.log("[*_*] about link clicked.");
+		});
+		
+		$(link_resume).bind("click", function(){
+			currentPage == link_resume; 
+			setNavColors(); 
+			setResumePageContent();
+			console.log("[*_*] resume link clicked.");
+		});
+				
+		$(link_projects).bind("click", function(){
+			currentPage == link_projects; 
+			setNavColors(); 
+			setProjectsPageContent();
+			console.log("[*_*] projects link clicked.");
+		});
+		
+		$(link_contact).bind("click", function(){
+			currentPage == link_contact; 
+			setNavColors(); 
+			setContactPageContent();
+			console.log("[*_*] contact link clicked.");
+		});
+	
 	
 };   // end var: main()
 
