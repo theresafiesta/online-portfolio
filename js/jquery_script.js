@@ -70,7 +70,7 @@ var main = function()
 	function setHomePageContent()
 	{
 		// content variables
-		var title = "Online Portfolio";
+		var title = "Welcome to my Online Portfolio.";
 		var tagline = "<p id=\"tagline\">" +
 		"\"A compilation of artistic talent and innovative circumstance.\"</p>";
 		var elevatorPitch = "<p id=\"elevator\">" + tab +
@@ -81,7 +81,7 @@ var main = function()
 		br + br +
 		"I am currently looking to find a Python or Java development position in a Linux environment that will leverage my skills, creativity and interests.  " +
 		"My goal as a prospective employee is to seek a career that enriches and inspires others through technology and innovative ideas.  " +
-		"</p>";
+		br + br + "</p>";
 		
 		// clean up the page elements
 		$(pageTitle).empty();
@@ -120,7 +120,7 @@ var main = function()
 	function setAboutPageContent()
 	{
 		// content variables
-		var title = "Theresa the Programmer: In a Nutshell<br/>";
+		var title = "Theresa: In a Nutshell.<br/>";
 		
 		var subtitle_edu = "<h2 id=\"subtitle_edu\">" +
 		"Educational Background<br/><h2>";
@@ -161,8 +161,8 @@ var main = function()
 		"I have spent a lot of time reading articles and watching seminars by the SANS Institute, and have also read books on topics including ethical hacking and  security+.  " +
 		"Naturally, some of the advanced concepts I encountered throughout research into many of these topics also inspired me to study some fundamentals behind digital systems.  " +
 		"These areas include programmable logic devices, logic gates, Karnaugh maps, and combinatorial logic circuits.  " +
-		"Some additional topics I continue to research in my personal time include hardware configuration, protocols, and system resources.  <br/>" +
-		"</p>";		
+		"Some additional topics I continue to research in my personal time include hardware configuration, protocols, and system resources. " +
+		br + br + "</p>";		
 		
 		// clean up the page elements
 		$(pageTitle).empty();
@@ -202,7 +202,31 @@ var main = function()
 	function setResumePageContent()
 	{
 		// content variables
-
+		var title = "Resume and Company Culture Fit.";
+		
+		var subtitle_infogr = "<h2 id=\"subtitle_infogr\">Brief Infographic Overview</h2>" + br + br;
+		var infographic = "<img src=\"\" alt=\"infographic image\">" + br + br;
+		var resume = "<p id=\"resume\" ><i class=\"fa fa-arrow-circle-down fa-2x\"></i>" +
+		tab + "Download my resume.</p>";
+		
+		var subtitle_pref = "<h2 id=\"subtitle_pref\">Ideal Workplace and Company Culture<br/></h2>";
+		var culturePreference = "<p id=\"culturePreference\">" + tab +
+		"My ideal workplace seeks to encourage team building through events and programs that enable like-minded, " +
+		"inquisitive individuals to learn and experience professional growth through interaction with one another.  " +
+		"The kind of team that I prefer is one that is self-managed, meaning that team members are equally empowered.  " +
+		"I prefer this particular team configuration because I believe that it enables all members to take ownership of of the decisions involved " +
+		"in their work and that this contributes to a higher level of motivation and overall job satisfaction.  " +
+		br + br + tab +
+		"Continuing and broadening my skill set and knowledge is also important to me at both a professional and personal level.  " +
+		"Therefore, I am very interested in a company culture that encourages its employees to do so with training opportunities and programs.  " +
+		"I also value when companies seek to improve the health and wellness of their employees through unique benefits and programs.  " +
+		"I personally believe that individuals perform their best and actualize their most creative ideas under ideal physical and emotional conditions. "+
+		br + br + tab +
+		"My own personal philosophy and mental attitude toward careers in general is that the work we do shouldn't just be a job we do everyday to satisfy life's basic demands; " +
+		"it is an experience that should enrich our minds, encourage us to seek success, develop leadership, and grow together as individuals." +
+		br + br + "</p>";
+		
+		
 		
 		// clean up the page elements
 		$(pageTitle).empty();
@@ -210,7 +234,23 @@ var main = function()
 		$(section_middle).empty();
 		$(section_bottom).empty();
 		
-		$(pageTitle).append("testing the resume page!");
+		// set the title
+		$(pageTitle).append(title);
+		
+		// add a short infographic overview and resume download link
+		$(section_top).append(subtitle_infogr);
+		$("#subtitle_infogr").css('text-align','center');
+		$(section_top).append(infographic);
+		$("#infographic").css('text-align','center');
+		$(section_top).append(resume);
+		$("#resume").css('text-align','center');
+		$("#resume").css('background-color','none')
+		
+		
+		// add ideal workplace and company culture
+		$(section_middle).append(subtitle_pref);
+		$("#subtitle_pref").css('text-align','center');
+		$(section_middle).append(culturePreference);		
 		
 		// set the last visited page
 		lastPage = link_resume;
@@ -220,7 +260,7 @@ var main = function()
 	//##################################################//
 	//##		Projects Page Content
 	//##################################################//
-	
+	// code snippets & download links, storyboards, sample documentation,photoshop, tutorial video, blender models
 	
 	// function displays the page contents
 	function setProjectsPageContent()
@@ -250,9 +290,25 @@ var main = function()
 	function setContactPageContent()
 	{
 		// content variables
-		var linkedin = ""
-		var gitHub = ""
-		var email = "thenem0301@students.ecpi.edu"
+		var title = "Contact Me."
+		var subtitle_greet = "<h2 id=\"subtitle_greet\">Prospective Employers and Fellow Developers</h2>";
+		var greeting = "<p id=\"greeting\">" + 
+		"If you are a prospective employer you may contact me by email or on LinkedIn by clicking the icons below.  " +
+		"Alternatively, if you are a fellow developer looking for a team members on an open-source project feel free to reach out to me via Github." +
+		"</p>";
+		
+		var linkedin_url = "https://linkedin.com/in/theresa-nemeth-485861141";
+		var linkedin_icon = "<a class=\"fa fa-linkedin-square fa-3x\" aria-hidden=\"true\" href=\"" + linkedin_url + "\"></a>";	
+		
+		var github_url = "https://github.com/theresafiesta";
+		var github_icon = "<a class=\"fa fa-github fa-3x\" aria-hidden=\"true\" href=\"" + github_url + "\"></a>";	
+		
+		var email_addr = "thenem0301@students.ecpi.edu";
+		var email_icon = "<i class=\"fa fa-envelope-open fa-3x\" aria-hidden=\"true\" data-clipboard-target=\"" + email_addr+ "\"></i>";		
+		
+		var codewars_username = "";
+		
+		var icons = "<p id=\"icons\">" + email_icon + tab + linkedin_icon + tab + github_icon + "</p>";
 	
 	
 		// clean up the page elements
@@ -261,7 +317,18 @@ var main = function()
 		$(section_middle).empty();
 		$(section_bottom).empty();
 		
-		$(pageTitle).append("testing the contact page!");
+		// set the title
+		$(pageTitle).append(title);
+		
+		// contact me text
+		$(section_top).append(subtitle_greet);
+		$("#subtitle_greet").css('text-align','center');
+		$(section_top).append(greeting);
+		$("#greeting").css('text-align','center');
+		
+		// add linkedin, github, email icons
+		$(section_top).append(icons);
+		$("#icons").css('text-align','center');
 		
 		// set the last visited page
 		lastPage = link_contact;

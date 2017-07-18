@@ -86,6 +86,10 @@ footer
 	right: 0px;
 	margin-bottom: 0px;
 }
+.fa  /*font awesome icons*/
+{
+	text-decoration: none;
+}
 #copyright
 {
 	text-align: center;
