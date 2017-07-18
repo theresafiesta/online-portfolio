@@ -76,7 +76,7 @@ var main = function()
 		var elevatorPitch = "<p id=\"elevator\">" + tab +
 		"I am a software developer and recent graduate of ECPI University with a B.S. in Computer Science .  " +
 		"I have two and a half years of hands-on experience  programming in languages such as Java, Python, JavaScript, HTML, C#, C++, and C.  " +
-		"My interests in open source software and cybersecurity have shaped me into an adamant Linux user and enthusiast.  " +
+		"My interests in open source software and cyber security have shaped me into an adamant Linux user and enthusiast.  " +
 		"I also have lots of creativity and professional artistic experience including digital imaging, video editing, storyingboarding, animation, and classical music composition.  "+
 		br + br +
 		"I am currently looking to find a Python or Java development position in a Linux environment that will leverage my skills, creativity and interests.  " +
@@ -225,9 +225,7 @@ var main = function()
 		"My own personal philosophy and mental attitude toward careers in general is that the work we do shouldn't just be a job we do everyday to satisfy life's basic demands; " +
 		"it is an experience that should enrich our minds, encourage us to seek success, develop leadership, and grow together as individuals." +
 		br + br + "</p>";
-		
-		
-		
+	
 		// clean up the page elements
 		$(pageTitle).empty();
 		$(section_top).empty();
@@ -245,7 +243,6 @@ var main = function()
 		$(section_top).append(resume);
 		$("#resume").css('text-align','center');
 		$("#resume").css('background-color','none')
-		
 		
 		// add ideal workplace and company culture
 		$(section_middle).append(subtitle_pref);
@@ -266,7 +263,34 @@ var main = function()
 	function setProjectsPageContent()
 	{
 		// content variables
+		var title = "Projects, Team Experiences, and Aspirations.";
 		
+		var subtitle_proj = "<h2 id=\"subtitle_proj\">My Software Projects</h2>";
+		var projects = "<p id=\"projects\">...projects will go here....maybe a photo gallery of snippings with download links?...</p>";
+		
+		var subtitle_team = "<h2 id=\"subtitle_team\">Hands-On Project Management and Team Experiences</h2>";
+		var teamExperiences = "<p id=\"teamExperiences\">" + 
+		"<i>Project Green Screen</i>" + br + tab +
+		"building green screen, editing videos, helping nick with virtual reality campus tour..." + br +  br + 
+		"<i>Project Design " + amp + " Consign</i>" + br + tab +
+		"documentation, storyboarding, meeting with clients, requirements planning..." + br +  br + 
+		"<i>Project Foodiac</i>" + br + tab +
+		"documentation, logo..." + br +  br + 
+		"<i>Software Development Club at ECPI University</i>" + br + tab +
+		"minesweeper, virtual reality assets with nick..." + 
+		"</p>";
+		
+		var subtitle_goals = "<h2 id=\"subtitle_goals\">Goals and Aspirations</h2>";
+		var goals = "<p id=\"goals\">" + tab +
+		"My first and foremost short term goal now that I have graduated is to seek employment and begin my career in ernest as a developer.  " +
+		"My future education currently is a 2-5 year range plan and includes the prospective pursuit of a M.D. in either Information Security Engineering at the Sans Institute " +
+		"or in Game Design at Full Sail University.   I want to spend a year or two in the field before I make the decision about how my career will branch and grow.  " +
+		br + br + tab +
+		"There are several topics in programming which I am interested in learning and researching in the meantime.  " +
+		"I am very interested in machine learning and big data analysis with Python and I plan to pursue learning these topics over time.  " +
+		"I am also very interested in spending more time doing bash scripting and learning linux kernel module programming.  " +
+		"In the future, I hope to expand my knowledge of digital systems and learn to program Arduinos and Raspberry Pi.  " +
+		"</p>" + br + br;
 		
 		// clean up the page elements
 		$(pageTitle).empty();
@@ -274,7 +298,24 @@ var main = function()
 		$(section_middle).empty();
 		$(section_bottom).empty();
 		
-		$(pageTitle).append("testing the projects page!");
+		// set the title
+		$(pageTitle).append(title);
+		
+		// set the project interactive ui stuff
+		$(section_top).append(subtitle_proj);
+		$("#subtitle_proj").css('text-align','center');
+		$(section_top).append(projects);
+		$("#projects").css('text-align','center');		
+		
+		// set the team experience text
+		$(section_middle).append(subtitle_team);
+		$("#subtitle_team").css('text-align','center');
+		$(section_middle).append(teamExperiences);
+		
+		// set the goals and aspirations text
+		$(section_bottom).append(subtitle_goals);
+		$("#subtitle_goals").css('text-align','center');
+		$(section_bottom).append(goals);	
 		
 		// set the last visited page
 		lastPage = link_projects;
@@ -306,10 +347,8 @@ var main = function()
 		var email_addr = "thenem0301@students.ecpi.edu";
 		var email_icon = "<i class=\"fa fa-envelope-open fa-3x\" aria-hidden=\"true\" data-clipboard-target=\"" + email_addr+ "\"></i>";		
 		
-		var codewars_username = "";
-		
 		var icons = "<p id=\"icons\">" + email_icon + tab + linkedin_icon + tab + github_icon + "</p>";
-	
+		// consider codewars, stackexchange, stackoverflow
 	
 		// clean up the page elements
 		$(pageTitle).empty();
@@ -380,7 +419,6 @@ var main = function()
 			setContactPageContent();
 			console.log("[*_*] contact link clicked.");
 		});
-	
 	
 };   // end var: main()
 
